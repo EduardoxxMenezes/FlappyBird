@@ -72,6 +72,13 @@ function ImagesTouching(thing1, thing2) {
   return true;
 }
 function Got_Player_Input(MyEvent) {
+   var audio = document.getElementById('myAudio');
+  audio.play().then(function() {
+      console.log('Áudio iniciado com sucesso');
+  }).catch(function(error) {
+      console.log('Falha ao iniciar o áudio:', error);
+  });
+  
   switch (game_mode) {
     case 'prestart': {
       game_mode = 'running';
