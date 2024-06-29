@@ -1,0 +1,88 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* JOGO */
+
+canvas#myCanvas{
+    background-image: url(./assets/FlappyBack.svg);
+    /* http://s2js.com/img/etc/flappyback.png */
+    background-size:100%; ;
+    height: 100%;
+    border: 1x solid #0a3cda;
+}
+
+/* PATROCINIO */
+
+.ptrBtn{
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    height: 40px;
+    width: 100px;
+}
+
+#play{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    font-size: 35px;
+}
+
+.ptrImg{
+    width: 900px;
+}
+
+#ptr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    gap: 60px;
+    flex-direction: column;
+}
+
+.title{
+    color: black;
+}
+
+.ptrs{
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    height: 0;
+    overflow: hidden;
+}
+
+.ptrs.show {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.5s ease-in-out, height 0s;
+}
